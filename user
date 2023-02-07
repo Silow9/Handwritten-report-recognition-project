@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>zVossen</title>
+	<meta name="description" content="Free Responsive Html5 Css3 Templates | zerotheme.com">
+	<meta name="author" content="www.zerotheme.com">
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+  	<link rel="stylesheet" href="css/zerogrid.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+    
+    <style type="text/css">
+<!--
+.STYLE1 {color: #FFFFFF}
+.STYLE2 {
+	font-size: xx-large;
+	font-weight: bold;
+}
+-->
+    </style>
+</head>
+<body id="single">
+<div class="wrap-body">
+
+<!--////////////////////////////////////Header-->
+<header>
+	<div class="top-bar">
+		<div class="wrap-top zerogrid">
+		  <div class="row "></div>
+		</div>
+	</div>
+	<div class="nav-bar">
+		<div class="wrap-nav zerogrid">
+			<div class="row">
+				<div class="col-1-3">
+					<div class="wrap-col">
+						<div class="logo"><a href="#"></a></div>	
+					</div>
+				</div>
+				<div class="col-2-3">
+				  <div class="wrap-col f-right">
+                    <div id="menu">
+                      <nav>
+                        <ul>
+                          <li class="active"><a href="index.html">首页</a></li>
+                          <li><a href="code.html">代码运行界面</a><a href="archive.html"></a></li>
+                          <li> </li>
+                          <li><a href="contact.html"></a><a href="archive.html"></a></li>
+                        </ul>
+                      </nav>
+                    </div>
+			      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap-header">
+		<h1>代码运行界面 </h1>
+</div>
+</header>
+
+
+<!--////////////////////////////////////Container-->
+<section id="container">
+	<div class="wrap-container">
+		<div id="main-content">
+			<div class="zerogrid">
+				<div class="row wrap-content">
+					<div class="col-3-4">
+						<div class="wrap-col">
+							<article>
+								<div class="art-header">
+									<div class="entry-title"> 
+										<h2>代码运行模块&nbsp;</h2>
+									</div>
+                                </div>
+							  <div class="art-content">
+							    <div>上传需要评分的报告文件&nbsp;</div>							    
+								  <form action="final.php" name="checklist" method="post" enctype="multipart/form-data">  
+									上传图片:   <input type="file" name="file" style="width: 200px; height: 20px;" onchange="PreviewImage(this)" id="file" />
+									  <input type="submit" value="提交报告"/>
+								  </form>
+								 
+								  
+							    <div>插入报告图片预览：&nbsp;</div>
+								<div id="imgPreview" style="width:600px; height:500px;" ></div>
+<script type="text/javascript">
+    function PreviewImage(imgFile) {
+        var filextension = imgFile.value.substring(imgFile.value.lastIndexOf("."), imgFile.value.length);
+        filextension = filextension.toLowerCase();
+            var path;
+            if (document.all)//IE
+            {
+                imgFile.select();
+                path = document.selection.createRange().text;
+  
+                document.getElementById("imgPreview").innerHTML = "";
+                document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+            }
+            else//FF
+            {
+                path = window.URL.createObjectURL(imgFile.files[0]);
+                document.getElementById("imgPreview").innerHTML = "<img id='img1' width='120px' height='100px' src='" + path + "'/>";
+                // document.getElementById("img1").src = path;
+            }
+        }
+</script>
+                              </div>
+							</article>
+							<div class="widget"> </div>
+						</div>
+					</div>
+					<div class="col-1-4">
+						<div id="sidebar" class="wrap-col">
+							<div class="wrap-sidebar">
+								<div class="widget">
+<div class="widget-box wid-meta">
+					  <div class="widget-title"> </div>
+										<div class="widget-content"> </div>
+									</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--////////////////////////////////////Footer-->
+<footer>
+  <div class="bottom-footer"> </div>
+</footer>
+
+
+</div>
+</body></html>
